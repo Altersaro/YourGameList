@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import {motion} from 'framer-motion'
 
-export const Card = styled.div`
+export const CardStyle = styled(motion.div)`
 
 position: relative;
 height: 400px;
 width: 300px ;
+margin: 5px;
 
 
 .card-img{
@@ -35,37 +37,30 @@ width: 300px ;
   font-size: 18px;
   font-weight: bold;
   display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.card-title:hover{
+  color: #18D935;
 }
 
 .card-info{
   align-self: flex-start;
   padding: 5px;
-  width: 80%;
+}
+
+.card-platforms{
+  font-size: 14px;
 }
 
 
-.add-button{
-  width: 60px;
-  height: 60px;
-  margin-right: 5px;
-  background-color: #352376 ;
-  border-style: none;
-  border-radius: 50px;
-  color: white;
-  font-size: 25px;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  border: 1px solid #352376;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width:992px) {
+  width:50%;
 }
 
-.add-button:hover{
-  background-color: #18D935;
-  color: #352376;
+@media screen and (max-width:992px) {
+  width:95%;
 }
-
 
 `
