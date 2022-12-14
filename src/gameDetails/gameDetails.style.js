@@ -62,8 +62,13 @@ h2{
 @media screen and (max-width:576px) {
     .presentation{
         grid-template-columns: 1fr;
-
     }
+
+    .details-img-container{
+    height: 50vh;
+    position: relative;
+    }
+
 
     .details-info-container{
         align-items: center;
