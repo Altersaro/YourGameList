@@ -4,7 +4,7 @@ import Route from './Route';
 import Sidebar from "./components/sidebar/Sidebar";
 import { ElementProvider } from '../src/ClientApi'
 import {BrowserRouter} from 'react-router-dom'
-import ScrollButton from './scrollButton/ScrollButton'
+import ScrollButton from './components/scrollButton/ScrollButton'
 
 
 
