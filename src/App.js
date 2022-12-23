@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import Pages from './Pages';
-import Sidebar from "./sidebar/Sidebar";
+import Route from './Route';
+import Sidebar from "./components/sidebar/Sidebar";
 import { ElementProvider } from '../src/ClientApi'
 import {BrowserRouter} from 'react-router-dom'
 import ScrollButton from './scrollButton/ScrollButton'
@@ -20,7 +20,7 @@ function App() {
         <ElementProvider>
           <div className='row flex-nowrap'>
             <Sidebar/>
-            <Pages/>
+            <Route/>
             <ScrollButton/>
           </div>
         </ElementProvider>

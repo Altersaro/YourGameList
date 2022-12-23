@@ -13,7 +13,7 @@ const initialState ={
 
 if(sessionStorage.getItem('user-info')){
     const user = JSON.parse(sessionStorage.getItem('user-info'))
-    var user_id=(user.data.id)
+    var user_id=(user.id)
 }
 
 
