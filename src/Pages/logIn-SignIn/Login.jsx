@@ -29,10 +29,10 @@ function Login() {
       }
 
 
-      await axios.post('http://localhost:8000/api/auth/login', sendData)
+      await axios.post('https://yourgameapi.fly.dev/api/auth/login', sendData)
       .then((res)=>{
         let token = res.data.token
-        axios.get('http://localhost:8000/api/auth/list',{headers:{
+        axios.get('https://yourgameapi.fly.dev/api/auth/list',{headers:{
           'Authorization': `Bearer ${token}`
         }})
         .then((user) =>{
