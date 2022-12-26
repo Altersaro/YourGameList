@@ -61,34 +61,34 @@ export const ElementProvider = (props) =>{
 
 
     async function getGames(){
-        const res = await axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_KEY}&dates=${precDate},${currentDate}&page_size=40`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&dates=${precDate},${currentDate}&page_size=40`);
         setGames(res.data.results);
     }
 
     async function getUpcoming(){
-        const res = await axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_KEY}&dates=${currentDate},${futureDate}&page_size=40`)
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&dates=${currentDate},${futureDate}&page_size=40`)
         setUpcoming(res.data.results);
     }
 
     async function getHotTitles(){
-        const res = await axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_KEY}&metacritic=80,100&dates=${precYearDate},${currentDate}&page_size=40`)
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&metacritic=80,100&dates=${precYearDate},${currentDate}&page_size=40`)
         setHotTitles(res.data.results)
         console.log(res.data.results);
     }
 
     async function getGenres(){
-        const res = await axios.get(`https://api.rawg.io/api/genres?key=${process.env.REACT_APP_KEY}&page_size=9`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/genres?key=${process.env.REACT_APP_KEY}&page_size=9`);
         setGenres(res.data.results);
     }
 
     async function getAllGenres(){
-        const res = await axios.get(`https://api.rawg.io/api/genres?key=${process.env.REACT_APP_KEY}`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/genres?key=${process.env.REACT_APP_KEY}`);
         setAllGenres(res.data.results);
         
     }
 
     async function getGamesGenres(){
-        const res = await axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_KEY}&genres=${path}&page_size=40`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&genres=${path}&page_size=40`);
         setGamesGenres(res.data.results);
     }
 

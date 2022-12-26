@@ -30,19 +30,19 @@ function GameDetail() {
     let params = useParams()
     
     async function getGamesDetails(name){
-        const res = await axios.get(`https://api.rawg.io/api/games/${name}?key=${process.env.REACT_APP_KEY}`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games/${name}?key=${process.env.REACT_APP_KEY}`);
         setGamesDetails(res.data);
 
     }
 
 
     async function getAdditions(name){
-        const res = await axios.get(`https://api.rawg.io/api/games/${name}/additions?key=${process.env.REACT_APP_KEY}`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games/${name}/additions?key=${process.env.REACT_APP_KEY}`);
         setAdditions(res.data.results)
     }
     
     async function getScreenshots(name){
-        const res = await axios.get(`https://api.rawg.io/api/games/${name}/screenshots?key=${process.env.REACT_APP_KEY}`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games/${name}/screenshots?key=${process.env.REACT_APP_KEY}`);
         setScreenshots(res.data.results);
     }
 

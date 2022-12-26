@@ -16,7 +16,7 @@ function Searched() {
 
 
     async function getSearched(search){
-        const res = await axios.get(`https://api.rawg.io/api/games?key=${process.env.REACT_APP_KEY}&search=${search}`);
+        const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&search=${search}`);
         setGameResults(res.data.results);
     }
 
