@@ -61,7 +61,7 @@ return (
         <h1 className='section-title'>{gamesDetails.name}</h1>
         <div className='presentation'>
             <div className='details-img-container'>
-                <img  className = 'details-img' src={gamesDetails.background_image} />
+                <img  className = 'details-img' src={gamesDetails.background_image ? gamesDetails.background_image : 'ImageDetailsNotFound.jpg'} />
                 <Vote metacritic={gamesDetails.metacritic}/>
                 <AddButton game={gamesDetails}/>
             </div> 

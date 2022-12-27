@@ -14,6 +14,7 @@ margin: 5px;
     border-radius: 20px;
     width: 100%;
     height: 100%;
+    image-rendering: optimizeSpeed;
 }
 
 
