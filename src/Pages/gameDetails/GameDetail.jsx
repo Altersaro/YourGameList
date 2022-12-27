@@ -61,7 +61,7 @@ return (
         <h1 className='section-title'>{gamesDetails.name}</h1>
         <div className='presentation'>
             <div className='details-img-container'>
-                <img  className = 'details-img' src={gamesDetails.background_image ? gamesDetails.background_image : 'ImageDetailsNotFound.jpg'} />
+                <img  className = 'details-img' src={gamesDetails.background_image ? gamesDetails.background_image : 'ImageDetailsNotFound.jpg'} alt={gamesDetails.name}/>
                 <Vote metacritic={gamesDetails.metacritic}/>
                 <AddButton game={gamesDetails}/>
             </div> 
@@ -99,7 +99,7 @@ return (
         <div className='screenshots-container'>
             {screenshots.map(screenshot=>{
                 return(
-                    <motion.img initial={{scale:0}} whileInView={{scale:1}} src={screenshot.image} key={screenshot.id}></motion.img>
+                    <motion.img initial={{scale:0}} whileInView={{scale:1}} src={screenshot.image} key={screenshot.id} alt={"screenshot"}></motion.img>
                 )
             })}
         </div>
@@ -109,13 +109,13 @@ return (
                 {additions.map(addition=>{ 
                     return(
                     <CardStyle key={addition.id} className="gamesGenre-card" initial={{scale:0}} whileInView={{scale:1}}>
-                        <img  className = 'card-img' src={addition.background_image ? addition.background_image : 'imagenotfound.jpg' } />
+                        <img  className = 'card-img' src={addition.background_image ? addition.background_image : 'imagenotfound.jpg' } alt={addition.name} />
                     <div className='card-info-container'>
                         <div className='card-info'>
                             <Link to={'/'+addition.slug} className='card-title'>{addition.name}</Link>
-                            <span>{addition.platforms.map(platform=>{
+                            <span className='card-platforms d-block'>{addition.platforms.map(platform=>{
                             return(
-                            <span key={platform.platform.id} className='card-platforms'>{platform.platform.name} </span>
+                            <span key={platform.platform.id} >{platform.platform.name} </span>
                             )
                             })}
                             </span>

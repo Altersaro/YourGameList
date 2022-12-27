@@ -64,7 +64,6 @@ body{
 .addition-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; 
 }
 
 .gamesGenre-card{
@@ -85,6 +84,9 @@ body{
 
       .s-desktop{
         display: none;
+      }
+      .addition-container{
+        width: 100%;
       }
 }
 
