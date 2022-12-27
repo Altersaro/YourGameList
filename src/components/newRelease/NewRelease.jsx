@@ -40,7 +40,8 @@ return(
 
             },
             768:{
-                perPage:1,
+                perPage:2,
+                gap:'2em',
             }}
             }   
             }>
