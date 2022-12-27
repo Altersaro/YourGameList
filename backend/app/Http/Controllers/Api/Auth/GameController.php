@@ -28,8 +28,8 @@ class GameController extends Controller
         $id = $request[0]['user_id'];
         $userGames = DB::table('user_games')
         ->select('user_games.*')
-            ->join('sign_in', function ($join) use ($id) {
-                $join->on('user_games.user_id', '=', 'sign_in.id')
+            ->join('users', function ($join) use ($id) {
+                $join->on('user_games.user_id', '=', 'users.id')
                     ->where('user_games.user_id', '=', $id);
         })
         ->get();

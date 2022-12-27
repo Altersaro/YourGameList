@@ -37,7 +37,6 @@ class User extends Authenticatable implements JWTSubject
     ];
 
     public $timestamps=false;
-    protected $table = 'sign_in';
 
     /**
      * The attributes that should be cast.

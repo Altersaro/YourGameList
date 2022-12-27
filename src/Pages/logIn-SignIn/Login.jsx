@@ -48,7 +48,7 @@ function Login() {
         })
       })
       .catch((error) =>{
-        if(error.response.data.status_code == 406){
+        if(error.response.data.status_code === 406){
           showAlert(error.response.data.message)
         }})
   }
