@@ -6,7 +6,7 @@ import AddButton from '../addButton';
 
 function Card(props) {
   return (
-    <CardStyle initial={{scale:0}} transition={{delay:0.2}} animate={{scale:1}}>
+    <CardStyle >
     <img  className ='card-img' src={props.game.background_image ? props.game.background_image : 'imagenotfound.jpg'} alt={props.game.name}/>
     <div className='card-info-container'>
         <div className='card-info'>
