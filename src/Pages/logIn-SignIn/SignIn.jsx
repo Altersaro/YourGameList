@@ -45,15 +45,15 @@ function SignIn() {
 
         }
 
-            axios.post('http://localhost:8000/api/auth/register', sendData)
+            axios.post('https://yourgameapi.fly.dev/api/auth/register', sendData)
                 .then((result) =>{
                     showAlert('Welcome to our community, Login and Enjoy!')
                     navigate('/Login')
                 }).catch((error)=>{
-                    if(error.response.data.errors.username){
-                        showAlert(error.response.data.errors.username[0])
+                    if(error.response.data.errors){
+                        showAlert(error.response.data.errors)
                     }else{
-                        showAlert(error.response.data.errors.email[0])
+                        showAlert(error.response.data.errors)
                     }
                 })
     }
