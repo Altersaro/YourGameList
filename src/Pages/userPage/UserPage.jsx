@@ -22,7 +22,7 @@ function UserPage() {
     
 
     async function getList(){
-      const res = await axios.post(`http://localhost:8000/api/get`, sendId);
+      const res = await axios.post(`https://yourgameapi.fly.dev/api/get`, sendId);
       setListData(res.data);
       sessionStorage.setItem('usergame', JSON.stringify(res.data))
     }
