@@ -15,7 +15,7 @@ function Completed(props) {
     function setCompleted(){
         showAlert('Gorgeous! You have completed this title')
         if(sessionStorage.getItem('user-info')){
-            if(axios.post('http://localhost:8000/api/completed',{id, user_id})){
+            if(axios.post('https://yourgameapi.fly.dev/api/completed',{id, user_id})){
                 refreshPage()
             }
         }
@@ -24,7 +24,7 @@ function Completed(props) {
     function setUnCompleted(){
         showAlert('What?! Then you had not completed it :(')
         if(sessionStorage.getItem('user-info')){
-            if(axios.post('http://localhost:8000/api/uncompleted',{id, user_id})){
+            if(axios.post('https://yourgameapi.fly.dev/api/uncompleted',{id, user_id})){
             refreshPage()
             }
         }

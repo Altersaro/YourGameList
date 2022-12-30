@@ -36,6 +36,7 @@ class User extends Authenticatable implements JWTSubject
         'remember_token',
     ];
 
+    protected $table = 'sign_in';
     public $timestamps=false;
 
     /**

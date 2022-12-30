@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React from 'react';
 import { LogIn } from './Login.style';
-import {redirect, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { ClientApiContext } from '../../ClientApi';
 
 
 
 function SignIn() {
 
-    const {showAlert, refreshPage} = React.useContext(ClientApiContext)
+    const {showAlert} = React.useContext(ClientApiContext)
 
 
     React.useEffect(()=>{
@@ -50,10 +50,10 @@ function SignIn() {
                     showAlert('Welcome to our community, Login and Enjoy!')
                     navigate('/Login')
                 }).catch((error)=>{
-                    if(error.response.data.errors){
-                        showAlert(error.response.data.errors)
+                    if(error.response.data.errors.username){
+                        showAlert(error.response.data.errors.username[0])
                     }else{
-                        showAlert(error.response.data.errors)
+                        showAlert(error.response.data.errors.email[0])
                     }
                 })
     }

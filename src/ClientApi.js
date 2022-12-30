@@ -106,7 +106,7 @@ export const ElementProvider = (props) =>{
     const addGameToList = (game) => {
         if(sessionStorage.getItem('user-info')){
             dispatch({type: "ADD_GAME_TO_LIST", payload: game});
-            axios.post('http://localhost:8000/api/addGame', {...game, user_id:user_id, completed:0});
+            axios.post('https://yourgameapi.fly.dev/api/addGame', {...game, user_id:user_id, completed:0});
             showAlert('AMAZING!, Now this game is in your list')
         }else{
             setPopupState(true)
@@ -117,7 +117,7 @@ export const ElementProvider = (props) =>{
     const deleteGameToList = (id) =>{
         showAlert('You have removed this game from list')
         if(sessionStorage.getItem('user-info')){
-            axios.post('http://localhost:8000/api/delete',{id, user_id})
+            axios.post('https://yourgameapi.fly.dev/api/delete',{id, user_id})
             dispatch({type:"REMOVE_GAME_FROM_LIST",payload:id})
             refreshPage()
         }
