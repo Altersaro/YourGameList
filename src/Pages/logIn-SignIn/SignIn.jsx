@@ -45,7 +45,7 @@ function SignIn() {
 
         }
 
-            axios.post('https://yourgameapi.fly.dev/api/auth/register', sendData)
+            axios.post(`${process.env.REACT_APP_API_URL}api/auth/register`, sendData)
                 .then((result) =>{
                     showAlert('Welcome to our community, Login and Enjoy!')
                     navigate('/Login')

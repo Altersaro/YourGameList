@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
@@ -27,6 +28,7 @@ class UserController extends Controller
         $user->save();
 
         return $user;
+
     }
 
     function login(LoginRequest $request){

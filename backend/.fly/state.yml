@@ -1,0 +1,7 @@
+channel: latest
+last_checked_at: 2022-12-23T17:34:45.9146999+01:00
+latest_release:
+    version: v0.0.441
+    prerelease: false
+    download_url: https://github.com/superfly/flyctl/releases/download/v0.0.441/flyctl_0.0.441_Windows_x86_64.zip
+    timestamp: 2022-12-16T19:32:50Z
