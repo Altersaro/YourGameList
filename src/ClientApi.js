@@ -63,6 +63,7 @@ export const ElementProvider = (props) =>{
     async function getGames(){
         const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&dates=${precDate},${currentDate}&page_size=40`);
         setGames(res.data.results);
+        console.log(res.data.result);
     }
 
     async function getUpcoming(){

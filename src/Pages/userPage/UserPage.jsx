@@ -22,9 +22,10 @@ function UserPage() {
     
 
     async function getList(){
-      const res = await axios.post(`https://yourgameapi.fly.dev/api/get`, sendId);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}api/get`, sendId);
       setListData(res.data);
       sessionStorage.setItem('usergame', JSON.stringify(res.data))
+      console.log(res.data);
     }
 
 
