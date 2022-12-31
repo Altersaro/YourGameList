@@ -35,7 +35,7 @@ export const ElementProvider = (props) =>{
 
     //date provider
     const current = new Date();
-    let date = current.getDate();
+    let date = current.getDate()-1;
     let month = current.getMonth()+1;
     let year = current.getFullYear();
     let currentDate = `${year}-${month<10? `0${month}`: `${month}`}-${date<10? `0${date}`: `${date}`}`;
@@ -63,7 +63,7 @@ export const ElementProvider = (props) =>{
     async function getGames(){
         const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&dates=${precDate},${currentDate}&page_size=40`);
         setGames(res.data.results);
-        console.log(res.data.result);
+        console.log(currentDate)
     }
 
     async function getUpcoming(){
