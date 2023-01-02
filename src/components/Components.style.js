@@ -74,9 +74,10 @@ export const Popups = styled(motion.div)`
 
 
     @media screen and (max-width: 768px) {
-        height: 30vw;
+        height: 25vh;
         left: 35%;
     }
+
 `
 
 export const Votes = styled(motion.span)`

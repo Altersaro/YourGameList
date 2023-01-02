@@ -74,7 +74,7 @@ return (
         <label htmlFor="email" className='log-label'>Email</label>
         <input type="email" id='email' name='email' className='box' onChange={handleChange} value={data.email} required/>
 
-        <label htmlFor="password" className='log-label'>Passowrd</label>
+        <label htmlFor="password" className='log-label'>Password</label>
         <input type="password" id='password' name='password' className='box' onChange={handleChange} value={data.password} required/>
 
         <button type='submit' className='log-button box'>Join Us</button>

@@ -20,7 +20,7 @@ return(
     initial={{x:100, scale:0}}
     whileInView={{scale:1, x:0}} 
     transition={{delay:2}}
-    className='section-subtitle'>Games released in the last month</motion.h3>
+    className='section-subtitle'>Games released from December last year to today</motion.h3>
     
         <Splide 
             options={

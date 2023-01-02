@@ -38,12 +38,12 @@ export const ElementProvider = (props) =>{
     let date = current.getDate()-1;
     let month = current.getMonth()+1;
     let year = current.getFullYear();
-    let currentDate = `${year}-${month<10? `0${month}`: `${month}`}-${date<10? `0${date}`: `${date}`}`;
-    let precMonth = current.getMonth();
-    let precDate = `${year}-${month<10? `0${precMonth}`: `${precMonth}`}-${date<10? `0${date}`: `${date}`}`;
+    let precMonth = current.getMonth()-2;
     let futureYear = current.getFullYear()+1;
-    let futureDate = `${futureYear}-${month<10? `0${month}`: `${month}`}-${date<10? `0${date}`: `${date}`}`;
     let precYear = current.getFullYear()-1;
+    let currentDate = `${year}-${month<10? `0${month}`: `${month}`}-${date<10? `0${date}`: `${date}`}`;
+    let precDate = `${precYear}-${12}-${date<10? `0${date}`: `${date}`}`;
+    let futureDate = `${futureYear}-${month<10? `0${month}`: `${month}`}-${date<10? `0${date}`: `${date}`}`;
     let precYearDate = `${precYear}-${month<10? `0${month}`: `${month}`}-${date<10? `0${date}`: `${date}`}`;
 
 
@@ -64,6 +64,7 @@ export const ElementProvider = (props) =>{
         const res = await axios.get(`${process.env.REACT_APP_URL}/games?key=${process.env.REACT_APP_KEY}&dates=${precDate},${currentDate}&page_size=40`);
         setGames(res.data.results);
         console.log(currentDate)
+        console.log(precDate)
     }
 
     async function getUpcoming(){
