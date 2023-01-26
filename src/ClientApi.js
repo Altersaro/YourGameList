@@ -19,7 +19,9 @@ if(sessionStorage.getItem('user-info')){
 
 
 export const ElementProvider = (props) =>{
-    const [games, setGames] = React.useState([]);
+    const [games, setGames] = React.useState({
+        platforms:[]
+    });
     const [upcoming, setUpcoming] = React.useState([]);
     const [hotTitles, setHotTitles] = React.useState([]);
     const [genres, setGenres] = React.useState([]);
