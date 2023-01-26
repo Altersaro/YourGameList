@@ -5,18 +5,20 @@ import AddButton from '../addButton';
 
 
 function Card(props) {
+
+  const platforms =  props.game.platforms !=null ? props.game.platoforms : []
   return (
     <CardStyle>
     <img  className ='card-img' src={props.game.background_image ? props.game.background_image : 'imagenotfound.jpg'} alt={props.game.name}/>
     <div className='card-info-container'>
         <div className='card-info'>
             <Link to={'/'+props.game.slug} className='card-title'>{props.game.name}</Link>
-            <span>{props.game.platforms.map(platform=>{
+            {/* <span>{platforms.map(platform=>{
             return(
             <span key={platform.platform.id} className='card-platforms'>{platform.platform.name} </span>
             )
             })}
-            </span>
+            </span> */}
         </div>
     </div>
         <AddButton game={props.game}/>
