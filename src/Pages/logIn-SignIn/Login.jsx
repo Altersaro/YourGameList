@@ -57,7 +57,9 @@ function Login() {
 
   return (
     <LogIn className='col-10'>
-      <h1 className='section-title'>Log in</h1>
+      <h1 className='section-title'>Sorry but it is not possible to login at the moment, please try again later</h1>
+      <a href="/" className='redirect-link'>Back to Homepage</a>
+      {/* <h1 className='section-title'>Log in</h1>
       <form action="POST" className='logIn-form' onSubmit={submitForm}>
 
         <label htmlFor="email" className='log-label'>Email</label>
@@ -70,7 +72,7 @@ function Login() {
 
         <button type='submit'  className='log-button box' >Enjoy</button>
       </form>
-      <a href="/signin" className='redirect-link'>No Profile ? Sign in and enjoy!</a>
+      <a href="/signin" className='redirect-link'>No Profile ? Sign in and enjoy!</a> */}
     </LogIn>
   )
 }

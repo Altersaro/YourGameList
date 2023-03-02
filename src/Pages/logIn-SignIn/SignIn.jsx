@@ -60,7 +60,9 @@ function SignIn() {
 
 return (
     <LogIn className='col-10'>
-    <h1 className='section-title'>Sign in</h1>
+        <h1 className='section-title'>Sorry, but it is not possible to register at the moment.Please try again later</h1>
+        <a href="/" className='redirect-link'>Back to Homepage</a>
+    {/* <h1 className='section-title'>Sign in</h1>
     <form action="POST" className='logIn-form' onSubmit={submitForm}>
         <label htmlFor="username" className='log-label'>Username</label>
         <input type="text" id='username' name='username' className='box' onChange={handleChange} value={data.username} required/>
@@ -79,7 +81,7 @@ return (
 
         <button type='submit' className='log-button box'>Join Us</button>
     </form>
-    <a href="/login" className='redirect-link'>Do you have an account? Log In!</a>
+    <a href="/login" className='redirect-link'>Do you have an account? Log In!</a> */}
     </LogIn>
 )
 }
